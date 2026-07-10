@@ -221,7 +221,7 @@
     "lang-sort": "./resources/lang-sort.sh",
     "lint-fix": "eslint --ext .js,.ts,.tsx --max-warnings 0 --fix .",
     "postinstall": "patch-package --error-on-fail && jetify && npm run android-clean-cmake-cache && npm run android-autolinking",
-    "start": "make dev",
+    "start": "node api.js && make dev",
     "test": "DOTENV_CONFIG_PATH=tests/.env wdio run tests/wdio.conf.ts",
     "test-single": "DOTENV_CONFIG_PATH=tests/.env wdio run tests/wdio.conf.ts --spec",
     "test-ff-single": "DOTENV_CONFIG_PATH=tests/.env wdio run tests/wdio.firefox.conf.ts --spec",
